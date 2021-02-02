@@ -25,10 +25,10 @@
                 <TextBlock Grid.Row="0" Grid.Column="0">Введите логин</TextBlock>
                 <TextBox Grid.Row="0" Grid.Column="1" x:Name="LoginTextBox"></TextBox>
                 <TextBlock Grid.Row="1" Grid.Column="0">Введите пароль</TextBlock>
-                <TextBox Grid.Row="1" Grid.Column="1" x:Name="PasswordTextBox"></TextBox>
-                <Button Grid.Row="2" Grid.Column="0">Войти</Button>
-                <Button Grid.Row="2" Grid.Column="1">Регистрация</Button>
-                <CheckBox Grid.Row="3" Grid.ColumnSpan="2">Сохранить логин</CheckBox>
+                <PasswordBox Grid.Row="1" Grid.Column="1" x:Name="PasswordTextBox"></PasswordBox>
+                <Button Grid.Row="2" Grid.Column="0" x:Name="AccessButton" Click="AccessButton_click">Войти</Button>
+                <Button Grid.Row="2" Grid.Column="1" x:Name="RegButton" Click="RegButton_Click">Регистрация</Button>
+                <CheckBox Grid.Row="3" Grid.ColumnSpan="2" x:Name="CheckBoxA">Сохранить логин</CheckBox>
             </Grid>
         </StackPanel>
         

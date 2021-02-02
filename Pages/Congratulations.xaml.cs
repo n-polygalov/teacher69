@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace teacher69.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для RegPage.xaml
+    /// Логика взаимодействия для Congratulations.xaml
     /// </summary>
-    public partial class RegPage : Page
+    public partial class Congratulations : Page
     {
-        public RegPage()
+        public Congratulations()
         {
             InitializeComponent();
-        }
-
-        private void AccessButton_click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

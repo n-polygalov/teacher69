@@ -24,5 +24,27 @@ namespace teacher69.Pages
         {
             InitializeComponent();
         }
+
+        private void AccessButton_click(object sender, RoutedEventArgs e)
+        {
+            if (LoginTextBox.Text == "admin")
+            {
+                if (PasswordTextBox.Password.ToString() == "12345")
+                {
+                    this.NavigationService.Navigate(new Congratulations());
+                }
+               
+                
+            }
+            else
+            {
+                this.NavigationService.Navigate(new nigra());
+            }
+        }
+
+        private void RegButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new RegPage());
+        }
     }
 }
