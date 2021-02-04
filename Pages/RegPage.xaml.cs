@@ -20,14 +20,43 @@ namespace teacher69.Pages
     /// </summary>
     public partial class RegPage : Page
     {
+        Core.teacher69Entities context;
         public RegPage()
         {
             InitializeComponent();
+            context = new Core.teacher69Entities();
         }
 
         private void AccessButton_click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                int a = context.users.Where(x => x.login == LoginTextBox.Text).Count();
+                if (a == 0)
+                {
+                    if (PasswordTextBox.Password == RePasswordTextBox.Password)
+                    {
+                        Core.users user = new Core.users()
+                        {
+                            login = LoginTextBox.Text,
+                            password = PasswordTextBox.Password
+                        };
+                        //context.users.Add(new Core.users
+                        //{
+                        //    login = LoginTextBox.Text,
+                        //    password = PasswordTextBox.Password
+                        //});
+                        context.users.Add(user);
+                        context.SaveChanges();
+                        this.NavigationService.Navigate(new LoginPage() );
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Критический сбор в работе приложения:", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+           
         }
     }
 }

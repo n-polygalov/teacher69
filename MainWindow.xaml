@@ -25,9 +25,9 @@
             x:Name="BackButton"
             Content="Назад"
             Click="BackButton_click"
-            HorizontalAlignment="Right">
-            
-        </Button>
+            HorizontalAlignment="Right"/>
+
+
         <Frame ContentRendered="MainFrame_ContentRendered"
                NavigationUIVisibility="Hidden"
                x:Name="MainFrame"

@@ -13,28 +13,27 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
 namespace teacher69.Pages
 {
     /// <summary>
     /// Логика взаимодействия для LoginPage.xaml
     /// </summary>
     public partial class LoginPage : Page
-    {
+    { Core.teacher69Entities context;
         public LoginPage()
         {
             InitializeComponent();
+            context = new Core.teacher69Entities();
         }
 
         private void AccessButton_click(object sender, RoutedEventArgs e)
         {
-            if (LoginTextBox.Text == "admin")
+            int a = context.users.Where(x => x.login == LoginTextBox.Text && x.password == PasswordTextBox.Password).Count();
+            if (a == 1)
             {
-                if (PasswordTextBox.Password.ToString() == "12345")
-                {
-                    this.NavigationService.Navigate(new Congratulations());
-                }
-               
-                
+               this.NavigationService.Navigate(new Congratulations());
             }
             else
             {
