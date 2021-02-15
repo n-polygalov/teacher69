@@ -1,0 +1,50 @@
+﻿<Page x:Class="teacher69.Pages.AddStudentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:teacher69.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddStudentPage">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0">Введите Фио студента</TextBlock>
+                <TextBox Grid.Row="0" Grid.Column="1" x:Name="NameStudentBox"></TextBox>
+                <TextBlock Grid.Row="1" Grid.Column="0">Выберите специальность</TextBlock>
+                <ComboBox x:Name="Professions_List" Grid.Row="1" Grid.Column="1">
+                    
+                </ComboBox>
+                <TextBlock Grid.Row="2" Grid.Column="0">Выберите год поступления</TextBlock>
+                <ComboBox x:Name="YearAddList" Grid.Row="2" Grid.Column="1">
+
+                </ComboBox>
+                <TextBlock Grid.Row="3" Grid.Column="0">Выберите форму обучения</TextBlock>
+                <ComboBox x:Name="FormTimeList"  Grid.Row="3" Grid.Column="1">
+
+                </ComboBox>
+                <TextBlock Grid.Row="4" Grid.Column="0">Выберите название группы</TextBlock>
+                <ComboBox x:Name="GroupsList" Grid.Row="4" Grid.Column="1">
+
+                </ComboBox>
+                <Button Grid.Row="5" Grid.ColumnSpan="2" Content="Добавить" x:Name="AddBtn" Click="AddBtn_Click"></Button>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</Page>

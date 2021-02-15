@@ -4,8 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bb1721de9e194bc28ddf598f13f5a570" Name="Diagram1">
-        <EntityTypeShape EntityType="teacher69Model.users" Width="3.375" PointX="5.5" PointY="2.125" IsExpanded="true" />
+      <Diagram DiagramId="bb1721de9e194bc28ddf598f13f5a570" Name="Diagram1" ZoomLevel="101">
+        <EntityTypeShape EntityType="teacher69Model.FormTime" Width="1.5" PointX="3.75" PointY="13.25" />
+        <EntityTypeShape EntityType="teacher69Model.Groups" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="teacher69Model.History" Width="1.5" PointX="8.25" PointY="7.375" />
+        <EntityTypeShape EntityType="teacher69Model.Journals" Width="1.5" PointX="3" PointY="7.375" />
+        <EntityTypeShape EntityType="teacher69Model.Professions" Width="1.5" PointX="3.75" PointY="10.875" />
+        <EntityTypeShape EntityType="teacher69Model.Role" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="teacher69Model.Status" Width="1.5" PointX="6" PointY="14.125" />
+        <EntityTypeShape EntityType="teacher69Model.Students" Width="1.5" PointX="6" PointY="6.875" />
+        <EntityTypeShape EntityType="teacher69Model.Subjects" Width="1.5" PointX="0.75" PointY="4.25" />
+        <EntityTypeShape EntityType="teacher69Model.TeacherHasSubjects" Width="1.5" PointX="8.25" PointY="10.75" />
+        <EntityTypeShape EntityType="teacher69Model.Teachers" Width="1.5" PointX="6" PointY="11.625" />
+        <EntityTypeShape EntityType="teacher69Model.YearAdd" Width="1.5" PointX="3.75" PointY="4.5" />
+        <AssociationConnector Association="teacher69Model.FK_Students_FormTime" />
+        <AssociationConnector Association="teacher69Model.FK_Journal_Groups" />
+        <AssociationConnector Association="teacher69Model.FK_Students_Groups" />
+        <AssociationConnector Association="teacher69Model.FK_History_Status" />
+        <AssociationConnector Association="teacher69Model.FK_History_Students" />
+        <AssociationConnector Association="teacher69Model.FK_History_Teachers" />
+        <AssociationConnector Association="teacher69Model.FK_Journal_Students" />
+        <AssociationConnector Association="teacher69Model.FK_Journal_Subjects" />
+        <AssociationConnector Association="teacher69Model.FK_Students_Professions" />
+        <AssociationConnector Association="teacher69Model.FK_Students_YearAdd" />
+        <AssociationConnector Association="teacher69Model.FK_TeacherHasSubjects_Subjects" />
+        <AssociationConnector Association="teacher69Model.FK_TeacherHasSubjects_Teachers" />
+        <EntityTypeShape EntityType="teacher69Model.Users" Width="1.5" PointX="6.875" PointY="1" />
+        <AssociationConnector Association="teacher69Model.FK_Users_Role" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

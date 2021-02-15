@@ -12,13 +12,16 @@ namespace teacher69.Core
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Journals
     {
-        public int IdUser { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public Nullable<int> IdRole { get; set; }
+        public int IdJournal { get; set; }
+        public int IdStudent { get; set; }
+        public Nullable<int> IdSubject { get; set; }
+        public Nullable<int> Evaluation { get; set; }
+        public Nullable<int> IdGroup { get; set; }
     
-        public virtual Role Role { get; set; }
+        public virtual Groups Groups { get; set; }
+        public virtual Students Students { get; set; }
+        public virtual Subjects Subjects { get; set; }
     }
 }

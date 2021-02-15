@@ -25,6 +25,18 @@ namespace teacher69.Core
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<users> users { get; set; }
+        public virtual DbSet<FormTime> FormTime { get; set; }
+        public virtual DbSet<Groups> Groups { get; set; }
+        public virtual DbSet<History> History { get; set; }
+        public virtual DbSet<Journals> Journals { get; set; }
+        public virtual DbSet<Professions> Professions { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<Status> Status { get; set; }
+        public virtual DbSet<Students> Students { get; set; }
+        public virtual DbSet<Subjects> Subjects { get; set; }
+        public virtual DbSet<TeacherHasSubjects> TeacherHasSubjects { get; set; }
+        public virtual DbSet<Teachers> Teachers { get; set; }
+        public virtual DbSet<YearAdd> YearAdd { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

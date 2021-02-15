@@ -1,0 +1,44 @@
+﻿<Page x:Class="teacher69.Pages.RatingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:teacher69.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RatingPage">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="1" Grid.Column="0">Выберите группу</TextBlock>
+                <ComboBox Grid.Row="1" Grid.Column="1" x:Name="GroupList" SelectionChanged="GroupList_SelectionChanged"></ComboBox>
+
+                <TextBlock Grid.Row="2" Grid.Column="0">Выберите студента</TextBlock>
+                <ComboBox Grid.Row="2" Grid.Column="1" x:Name="StudentList"></ComboBox>
+
+                <TextBlock Grid.Row="3" Grid.Column="0">Выберите дисциплину</TextBlock>
+                <ComboBox Grid.Row="3" Grid.Column="1" x:Name="SubjectsList"></ComboBox>
+
+                <TextBlock Grid.Row="4" Grid.Column="0">Оценка</TextBlock>
+                <TextBox Grid.Row="4" Grid.Column="1" x:Name="RatingTextBox"></TextBox>
+
+                <Button Grid.Row="5" Grid.ColumnSpan="2" Content="Поставить оценку" x:Name="AddBtn" Click="AddBtn_Click"></Button>
+                </Grid>
+            </StackPanel>
+        </Grid>
+</Page>

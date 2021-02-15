@@ -31,24 +31,24 @@ namespace teacher69.Pages
         {
             try
             {
-                int a = context.users.Where(x => x.login == LoginTextBox.Text).Count();
+                int a = context.Users.Where(x => x.Login == LoginTextBox.Text).Count();
                 if (a == 0)
                 {
                     if (PasswordTextBox.Password == RePasswordTextBox.Password)
                     {
-                        Core.users user = new Core.users()
+                        Core.Users user = new Core.Users()
                         {
-                            login = LoginTextBox.Text,
-                            password = PasswordTextBox.Password
+                            Login = LoginTextBox.Text,
+                            Password = PasswordTextBox.Password
                         };
                         //context.users.Add(new Core.users
                         //{
                         //    login = LoginTextBox.Text,
                         //    password = PasswordTextBox.Password
                         //});
-                        context.users.Add(user);
+                        context.Users.Add(user);
                         context.SaveChanges();
-                        this.NavigationService.Navigate(new LoginPage() );
+                        this.NavigationService.Navigate(new LoginPage());
                     }
                 }
             }

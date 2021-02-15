@@ -30,10 +30,10 @@ namespace teacher69.Pages
 
         private void AccessButton_click(object sender, RoutedEventArgs e)
         {
-            int a = context.users.Where(x => x.login == LoginTextBox.Text && x.password == PasswordTextBox.Password).Count();
+            int a = context.Users.Where(x => x.Login == LoginTextBox.Text && x.Password == PasswordTextBox.Password).Count();
             if (a == 1)
             {
-               this.NavigationService.Navigate(new Congratulations());
+               this.NavigationService.Navigate(new MainMenuPage());
             }
             else
             {

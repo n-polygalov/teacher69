@@ -12,13 +12,18 @@ namespace teacher69.Core
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class YearAdd
     {
-        public int IdUser { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public Nullable<int> IdRole { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public YearAdd()
+        {
+            this.Students = new HashSet<Students>();
+        }
     
-        public virtual Role Role { get; set; }
+        public int idYear { get; set; }
+        public Nullable<int> Year { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Students> Students { get; set; }
     }
 }
