@@ -37,5 +37,12 @@ namespace teacher69.Pages
             int a = Convert.ToInt32(GroupComboBox.SelectedValue);
             AllDataGrid.ItemsSource = context.Students.Where(x => x.IdGroup == a).ToList();
         }
+
+        private void profileButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button selectedButton = sender as Button;
+            Core.Students activeStudent=(Core.Students)selectedButton.DataContext;
+            //this.NavigationService.Navigate(new ProfilePage(context, activeStudent));
+        }
     }
 }

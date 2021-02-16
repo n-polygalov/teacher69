@@ -16,23 +16,24 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" >Выберите группу</TextBlock>
         <ComboBox Grid.Row ="0" x:Name="GroupComboBox" Grid.Column="1" SelectionChanged="GroupComboBox_SelectionChanged"></ComboBox>
-        <DataGrid Grid.Row="1" Grid.ColumnSpan="3"
+        <TextBlock Grid.Row="1" Grid.Column="0" >Выберите группу</TextBlock>
+        <ComboBox Grid.Row ="1" x:Name="SubjectsComboBox" Grid.Column="1" SelectionChanged="SubjectsComboBox_SelectionChanged"></ComboBox>
+        <DataGrid Grid.Row="2" Grid.ColumnSpan="3"
                   ColumnWidth="*"
                   IsReadOnly="True"
                   AutoGenerateColumns="False" 
                   SelectionMode="Single"
-                  x:Name="AllDataGrid"
+                  x:Name="EditDataGrid"
                   >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Студент(ФИО)" Binding="{Binding FiestName}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Специальность" Binding="{Binding Professions.NameProfession}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Форма обучения" Binding="{Binding FormTime.Name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Год поступления" Binding="{Binding YearAdd.Year}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Студент(ФИО)" Binding="{Binding Students.FiestName}"></DataGridTextColumn>
+               
                 <DataGridTemplateColumn Header="">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

@@ -38,6 +38,7 @@
           <Property Name="IdSubject" Type="int" />
           <Property Name="Evaluation" Type="int" />
           <Property Name="IdGroup" Type="int" />
+          <Property Name="date" Type="date" />
         </EntityType>
         <EntityType Name="Professions">
           <Key>
@@ -470,6 +471,7 @@
           <NavigationProperty Name="Groups" Relationship="teacher69Model.FK_Journal_Groups" FromRole="Journals" ToRole="Groups" />
           <NavigationProperty Name="Students" Relationship="teacher69Model.FK_Journal_Students" FromRole="Journals" ToRole="Students" />
           <NavigationProperty Name="Subjects" Relationship="teacher69Model.FK_Journal_Subjects" FromRole="Journals" ToRole="Subjects" />
+          <Property Name="date" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Professions">
           <Key>
@@ -775,6 +777,7 @@
           <EntitySetMapping Name="Journals">
             <EntityTypeMapping TypeName="teacher69Model.Journals">
               <MappingFragment StoreEntitySet="Journals">
+                <ScalarProperty Name="date" ColumnName="date" />
                 <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
                 <ScalarProperty Name="Evaluation" ColumnName="Evaluation" />
                 <ScalarProperty Name="IdSubject" ColumnName="IdSubject" />

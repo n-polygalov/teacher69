@@ -19,6 +19,7 @@ namespace teacher69.Core
         public Nullable<int> IdSubject { get; set; }
         public Nullable<int> Evaluation { get; set; }
         public Nullable<int> IdGroup { get; set; }
+        public Nullable<System.DateTime> date { get; set; }
     
         public virtual Groups Groups { get; set; }
         public virtual Students Students { get; set; }

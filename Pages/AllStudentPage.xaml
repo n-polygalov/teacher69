@@ -35,10 +35,10 @@
                 <DataGridTextColumn Header="Форма обучения" Binding="{Binding FormTime.Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Год поступления" Binding="{Binding YearAdd.Year}"></DataGridTextColumn>
                 <DataGridTemplateColumn Header="">
-                    <DataGridTemplateColumn.CellTemplate>
+                                 <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Button Content="Профиль"></Button>
+                                <Button Content="Профиль" x:Name="profileButton" Click="profileButton_Click"></Button>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
